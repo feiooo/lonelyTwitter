@@ -26,14 +26,10 @@ public abstract class Animal {
         return this.food;
     }
 
-    public abstract void swim();
-
-
-    /**
+    public void swim()
      {
      Log.d("cmput-301", "I love to swim");
 
     }
-    */
 
 }

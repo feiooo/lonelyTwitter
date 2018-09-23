@@ -24,7 +24,8 @@ public class LonelyTwitterActivity extends Activity {
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
-	
+	private ArrayList<String> showArray = new ArrayList<String>();
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -38,28 +39,17 @@ public class LonelyTwitterActivity extends Activity {
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
+				//setResult(RESULT_OK);
+				String text = bodyText.getText().toString();
+				showArray.add(text);
+				ArrayAdapter<String> adapter = new ArrayAdapter<String>(LonelyTwitterActivity.this, android.R.layout.simple_list_item_1, showArray);
+				oldTweetsList.setAdapter(adapter);
+				((EditText)findViewById(R.id.body)).setText(" ");
 
-				Cat cat1 = new Cat("I am a cat", "I love fish and rice");
-				//cat1.setType("I am a cat");
-				//cat1.setFood("I love fish and rice");
-
-				DommesticDuck domesticDuck1 = new DommesticDuck("I am a domestic duck", "I love fish");
-				//domesticDuck1.setType("I am a domestic duck");
-				//domesticDuck1.setFood("I love fish");
-
-				Log.d("cmput-301",cat1.getType());
-				Log.d("cmput-301",cat1.getFood());
-				Log.d("cmput-301",domesticDuck1.getType());
-				Log.d("cmput-301",domesticDuck1.getFood());
-
-				cat1.swim();
-				domesticDuck1.swim();
-
-
+				saveInFile(text, new Date(System.currentTimeMillis()));
+				//finish();
 
 			}
-
-
 		});
 	}
 
@@ -96,6 +86,7 @@ public class LonelyTwitterActivity extends Activity {
 	
 	private void saveInFile(String text, Date date) {
 		try {
+
 			FileOutputStream fos = openFileOutput(FILENAME,
 					Context.MODE_APPEND);
 			fos.write(new String(date.toString() + " | " + text)
@@ -107,6 +98,7 @@ public class LonelyTwitterActivity extends Activity {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+
 		}
 	}
 }
