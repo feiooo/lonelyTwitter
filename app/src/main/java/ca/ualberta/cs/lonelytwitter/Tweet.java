@@ -20,4 +20,7 @@ public abstract class Tweet {
         return this.date;
     }
     public abstract Boolean isImportant();
+
+
+    //public  setMood()
 }

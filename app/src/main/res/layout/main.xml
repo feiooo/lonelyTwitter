@@ -31,6 +31,12 @@
         android:layout_height="wrap_content"
         android:scrollbars="horizontal" />
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/mood_array"/>
+
     <Button
         android:id="@+id/clear"
         android:layout_width="match_parent"

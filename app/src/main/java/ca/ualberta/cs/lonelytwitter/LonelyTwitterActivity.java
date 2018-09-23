@@ -14,10 +14,12 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 public class LonelyTwitterActivity extends Activity {
 
@@ -35,6 +37,12 @@ public class LonelyTwitterActivity extends Activity {
 		bodyText = (EditText) findViewById(R.id.body);
 		Button saveButton = (Button) findViewById(R.id.save);
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
+
+		//Spinner spin = (Spinner) findViewById(R.id.spinner);
+		//spin.setOnItemClickListener(new OnItemSelectedListener);
+
+
+
 
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
