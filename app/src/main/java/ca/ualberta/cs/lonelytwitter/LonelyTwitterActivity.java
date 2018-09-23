@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+//import android.widget.Toast;
 
 public class LonelyTwitterActivity extends Activity {
 
@@ -42,6 +43,24 @@ public class LonelyTwitterActivity extends Activity {
 		//spin.setOnItemClickListener(new OnItemSelectedListener);
 
 
+		Spinner spinner = (Spinner) findViewById(R.id.spinner);
+		final ArrayList<String> list=new ArrayList<String>();
+		list.add("Happy");
+		list.add("Sad");
+		list.add("Angry");
+		list.add("Sorrow");
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+		spinner.setAdapter(adapter);
+		spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+				//Toast.makeText(LonelyTwitterActivity.this, "Mood: " + list.get(position), Toast.LENGTH_SHORT).show();
+				
+			}
+
+				public void onNothingSelected(AdapterView<?> parent) {
+				}
+		});
 
 
 		saveButton.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +79,8 @@ public class LonelyTwitterActivity extends Activity {
 			}
 		});
 	}
+
+
 
 	@Override
 	protected void onStart() {
