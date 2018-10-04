@@ -2,6 +2,18 @@
  * Copyright (c) Team X, CMPUT301, University of Alberta - All Rights Reserved. You may use, distribute, or modify this code under terms and conditions of the Code of Students Behavior at University of Alberta
  */
 
+
+/**
+ * Represents a Tweet
+ *
+ * @author FeiYang
+ * @version 1.0
+ * @see NormalTweet
+ * @see ImportantTweet
+ * @since 1.0
+ */
+
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;

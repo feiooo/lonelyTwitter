@@ -6,9 +6,15 @@ package ca.ualberta.cs.lonelytwitter;
 
 import java.util.Date;
 
+
+
+
+
+
 public abstract class Tweet {
     protected String message;
-    protected Date date;
+    protected Date date ;
+
 
 
 
@@ -39,3 +45,10 @@ public abstract class Tweet {
 
     //public  setMood()
 }
+
+/**
+ * Constructs Tweet objects
+ *
+ * @param message tweet message
+ * @param date tweet date
+ */
