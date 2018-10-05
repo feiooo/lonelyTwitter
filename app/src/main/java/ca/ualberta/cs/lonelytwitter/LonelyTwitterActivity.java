@@ -1,6 +1,16 @@
-/*
+/* Class Name: LonelyTwitterActivity
+ *
+ * Version: Version 1.0
+ *
+ * Date : October 4, 2018
+ *
  * Copyright (c) Team X, CMPUT301, University of Alberta - All Rights Reserved. You may use, distribute, or modify this code under terms and conditions of the Code of Students Behavior at University of Alberta
  */
+
+/**
+ * Created by FeiYang on 04/10/18.
+ */
+
 
 
 /**
@@ -44,6 +54,9 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 //import android.widget.Toast;
 
+/**
+ * The type Lonely twitter activity.
+ */
 public class LonelyTwitterActivity extends Activity {
 
 	private static final String FILENAME = "file.sav";
@@ -53,7 +66,10 @@ public class LonelyTwitterActivity extends Activity {
 	private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 	private ArrayAdapter<Tweet> adapter;
 
-	//String emotion = " ";
+    /**
+     * The Text.
+     */
+//String emotion = " ";
 	String text;
 	//String choice[] = {"Joy", "Surprise", "Sadness", "Anger"};
 
